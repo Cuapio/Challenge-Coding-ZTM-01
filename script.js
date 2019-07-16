@@ -44,21 +44,3 @@ function groupArray(arr) {
     } 
     return sortedArray;
 }
-
-// function isMixed(arr) { //SIN USO AQUI
-//     let isThereNumbers = false;
-//     let isThereStrings = false;
-//     let i = 0;
-//     while(i < arr.length && (!isThereNumbers || !isThereStrings)) {
-//         if(typeof arr[i] === 'number') {
-//             isThereNumbers = true;
-//         } else if(typeof arr[i] ==='string' && !isNaN(arr[i])) {
-//             isThereStrings = true;
-//         } else {
-//             alert("Solo se admiten array con numeros");
-//             return;
-//         }
-//         i++;
-//     }
-//     return (isThereNumbers && isThereStrings)? true : false;
-// }
