@@ -3,23 +3,19 @@ let target = 40;
 
 function findTarget(arr, target) {
     let nearest = Infinity;
-    let count = 0;
     let pairNearestToTarget = [];//In case of no answer, return the added pair nearest to the target 
     let differenceToTargetArray = arr.map((num) => target - num);//array for find the difference to the target of each element 
     let solutions = arr.map((num, index) => {
-        count++;
         for (let i = index+1; i < arr.length; i++) {
             if(nearest===0){
                 break;
             }
-            count++
             //check if current number is a solution for another number in the array
             if(num === differenceToTargetArray[i]) {
                 nearest = 0;
                 //return the pair of indexes of the elements that added are the target
                 return [index, i];
             } 
-
             //check the nearest pair to target
             if(nearest != 0) { 
                 let difference = target - (num +0 (arr[i]));
@@ -32,7 +28,7 @@ function findTarget(arr, target) {
         }
         return undefined;
     })
-    console.log("count:", count)
+
     if(nearest === 0 ){
         return solutions.filter((item) => item != undefined);
     } else {
