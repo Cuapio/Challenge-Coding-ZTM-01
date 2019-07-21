@@ -39,6 +39,11 @@ function findTarget(arr, target) {
 let solutionArray = findTarget(array, target);//pairs of solutions
 
 console.log("Conjunto solucion:", solutionArray);
+let n1 = solutionArray[0][0];
+let n2 = solutionArray[0][1];
+console.log(`La suma del par de numeros mas cercana a ${target}:
+${array[n1]}[${n1}] + ${array[n2]}[${n2}] = ${array[n1] + array[n2]}`);
+console.log(array);
 /*
 console.log(`Soluciones mas cercanas a ${target}:`)
 for (let i = 0; i < solutionArray.length; i++) {
@@ -49,12 +54,7 @@ for (let i = 0; i < solutionArray.length; i++) {
 }
 console.log(array);
 */
- //for multiple solutions (remove 'break' in function findTarget and the lines after this commented block )
-let n1 = solutionArray[0][0];
-let n2 = solutionArray[0][1];
-console.log(`La suma del par de numeros mas cercana a ${target}:
-${array[n1]}[${n1}] + ${array[n2]}[${n2}] = ${array[n1] + array[n2]}`);
-console.log(array);
+ //for multiple solutions remove 'break' in function findTarget 
 
 //Conjunto solucion: Array [[0, 14]]
 //La suma del par de numeros mas cercana a 40:
