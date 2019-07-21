@@ -7,9 +7,6 @@ function findTarget(arr, target) {
     let differenceToTargetArray = arr.map((num) => target - num);//array for find the difference to the target of each element 
     let solutions = arr.map((num, index) => {
         for (let i = index+1; i < arr.length; i++) {
-            if(nearest===0){
-                break;
-            }
             //check if current number is a solution for another number in the array
             if(num === differenceToTargetArray[i]) {
                 nearest = 0;
@@ -17,13 +14,15 @@ function findTarget(arr, target) {
                 return [index, i];
             } 
             //check the nearest pair to target
-            if(nearest != 0) { 
-                let difference = target - (num +0 (arr[i]));
+            if(nearest !== 0) { 
+                let difference = target - (num + (arr[i]));
                 difference = (difference<0)? difference * -1 : difference;
                 if(difference<nearest) {
                     nearest = difference;
                     pairNearestToTarget = [[index,i]];    
                 }
+            } else {
+                break;
             }
         }
         return undefined;
