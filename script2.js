@@ -15,7 +15,7 @@ function findTarget(arr, target) {
             } 
             //check the nearest pair to target
             if(nearest !== 0) { 
-                let difference = target - (num +0 (arr[i]));
+                let difference = target - (num + (arr[i]));
                 difference = (difference<0)? difference * -1 : difference;
                 if(difference<nearest) {
                     nearest = difference;
